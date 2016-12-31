@@ -5,7 +5,7 @@ import image.Image;
 public interface GUI{
 
 	/**
-	 * displays
+	 * dPaulisplays
 	 * @param image
 	 */
 	public void display(Image image);
