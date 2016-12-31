@@ -14,11 +14,11 @@ public class BoardImplementation implements Board {
 	List <Wall> WallList;
 	
 	public BoardImplementation(int width, int height){
-		if (width<1 || height < 1) {
-			width=1;
-			height=1;
+		if (width < 1 || height < 1) {
+			this.width  = 1;
+			this.height = 1;
 		}
-		else{
+		else {
 			this.width  = width;
 			this.height = height;	
 		}
