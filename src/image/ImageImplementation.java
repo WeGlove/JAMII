@@ -54,8 +54,19 @@ public class ImageImplementation implements Image {
 
 	@Override
 	public void setBlack() {
-		// TODO Auto-generated method stub
-		
+		int i1,i2;
+		i1 = 0;
+		i2 = 0;
+		while (i1 < w)
+		{
+			while ( i2 < h)
+			{
+				a [i1] [i2] = new PixelImplementation (0,0,0);
+				i2++;
+			}
+			i2 = 0;
+			i1++;
+		}
 	}
 
 }

@@ -1,6 +1,7 @@
 package testpenis;
 import org.junit.Test;
 import board.wall.WallImplementation;
+import gui.GUI;
 import board.wall.Wall;
 import board.light.Light;
 import board.light.Lightimplementation;
@@ -8,6 +9,9 @@ import image.pixel.PixelImplementation;
 import image.pixel.Pixel;
 import image.Image;
 import image.ImageImplementation;
+import board.Board;
+import gui.GUIImplementation;
+import board.BoardLib;
 public class Tests {//Penis
 	
 	@Test
@@ -89,5 +93,23 @@ public class Tests {//Penis
 		Pixel p = new PixelImplementation (42, 42, 42);
 		I.setPixel(1, 2, p);
 		assert (I.getPixel(1, 0).getR() == 0);
+	}
+	
+	@Test
+	public void TestDrawWall () {
+		Image I = new ImageImplementation (100,100);
+		Wall W = new WallImplementation (1,1,10,10);
+		I = BoardLib.DrawWall (I, W);
+		assert (I.getPixel(2, 2).getR() == 190);
+	}
+	
+	@Test
+	public void TestOppositeWall () {
+		Image I = new ImageImplementation (100,100);
+		Wall W = new WallImplementation (10,10,1,1);
+		I = BoardLib.DrawWall (I, W);
+	
+		assert (I.getPixel(2, 2).getR() == 190);
+
 	}
 }
