@@ -52,4 +52,10 @@ public class ImageImplementation implements Image {
 		
 	}
 
+	@Override
+	public void setBlack() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

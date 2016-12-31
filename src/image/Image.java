@@ -28,4 +28,9 @@ public interface Image {
 	 * @param p The Pixel containing replacement data
 	 */
 	public void setPixel (int x , int y, Pixel p); 
+	
+	/**
+	 * Sets every pixel to black
+	 */
+	public void setBlack();
 }
