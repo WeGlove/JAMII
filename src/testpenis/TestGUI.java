@@ -4,6 +4,8 @@ import org.junit.Test;
 
 import gui.GUI;
 import gui.GUIImplementation;
+import image.Image;
+import image.ImageImplementation;
 
 public class TestGUI {
 
@@ -16,7 +18,11 @@ public class TestGUI {
 	@Test
 	public void TestGUIDisplay(){
 		GUI g = new GUIImplementation();
-		g.display(null);//Warte auf Image
+		Image i = new ImageImplementation(100,100);
+		g.display(i);
+		while(true){
+		}
 	}
+	
 	
 }
