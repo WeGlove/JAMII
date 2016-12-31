@@ -66,4 +66,28 @@ public class Tests {//Penis
 		assert (I.getPixel(1, 2) != null);
 		
 	}
+	
+	@Test 
+	public void TestsetPixel () {
+		Image I = new ImageImplementation (3,4);
+		Pixel p = new PixelImplementation (42, 42, 42);
+		I.setPixel(1, 2, p);
+		assert (I.getPixel(1, 2).getR() == 42);
+	}
+	
+	@Test
+	public void Testsetwrongcoordinates () {
+		Image I = new ImageImplementation (3,4);
+		Pixel p = new PixelImplementation (42, 42, 42);
+		I.setPixel(0, 6, p);
+		assert (I.getPixel(0, 0).getR() == 42);
+	}
+	
+	@Test
+	public void Testotherspot () {
+		Image I = new ImageImplementation (3,4);
+		Pixel p = new PixelImplementation (42, 42, 42);
+		I.setPixel(1, 2, p);
+		assert (I.getPixel(1, 0).getR() == 0);
+	}
 }

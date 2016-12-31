@@ -21,4 +21,11 @@ public interface Image {
 	 * @return height of the image
 	 */
 	public int getHeight();
+	/**
+	 *  Sets the RGB value of the Pixel @ x y to p's;
+	 * @param x the Pixel's x coordinate 
+	 * @param y the Pixel'S y coordinate
+	 * @param p The Pixel containing replacemnet data
+	 */
+	public void setPixel (int x , int y, Pixel p); 
 }

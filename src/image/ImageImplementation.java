@@ -44,4 +44,12 @@ public class ImageImplementation implements Image {
 		
 	}
 
+	@Override
+	public void setPixel(int x, int y, Pixel p) {
+		if ((x < w) &&  (y <h))
+			a [x] [y] = p;
+		else a [0] [0] = p;
+		
+	}
+
 }
