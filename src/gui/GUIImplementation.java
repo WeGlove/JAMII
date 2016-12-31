@@ -19,7 +19,8 @@ public class GUIImplementation implements GUI{
 	@Override
 	public void display(Image image) {
 		if (image==null) return;
-		BufferedImage Img = ImgToBufImg(image);
+		
+		BufferedImage Img = GUILib.ImgToBufImg(image);
 		ImageIcon Icon = new ImageIcon(Img);
 		JLabel lblImg = new JLabel(Icon);
 		Frame.getContentPane().add(lblImg, BorderLayout.CENTER);
@@ -28,16 +29,6 @@ public class GUIImplementation implements GUI{
 
 	}
 	
-	private BufferedImage ImgToBufImg(Image image){
-		BufferedImage BufImg = new BufferedImage(image.getWidth(), image.getHeight(), 0);
-		for(int x=0; x<image.getWidth(); x++){
-			for(int y=0; y<image.getHeight(); y++){	
-				BufImg.setRGB(x, y, (image.getPixel(x, y).getR()<<16) | 
-									(image.getPixel(x, y).getG()<<8)  | 
-									 image.getPixel(x, y).getB());
-			}
-		}
-		return BufImg;
-	}
+
 
 }
