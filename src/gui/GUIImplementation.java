@@ -14,11 +14,13 @@ public class GUIImplementation implements GUI{
 	
 	public GUIImplementation(){
 		Frame = new JFrame();
+		Frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
 	@Override
 	public void display(Image image) {
 		if (image==null) return;
+		
 		
 		BufferedImage Img = GUILib.ImgToBufImg(image);
 		ImageIcon Icon = new ImageIcon(Img);

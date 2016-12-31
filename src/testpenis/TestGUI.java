@@ -19,6 +19,7 @@ public class TestGUI {
 	public void TestGUIDisplay(){
 		GUI g = new GUIImplementation();
 		Image i = new ImageImplementation(100,100);
+		i.getPixel(10, 10).setAll(255, 255, 255);
 		g.display(i);
 		while(true){
 		}
