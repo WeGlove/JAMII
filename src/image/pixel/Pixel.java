@@ -1,3 +1,4 @@
+
 package image.pixel;
 
 public interface Pixel {
